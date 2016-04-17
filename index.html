@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<h1>лабараторная работа 2</h1>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>TypeScript HTML App</title>
+    <link rel="stylesheet" href="app.css" type="text/css" />
+    <script src="app.js"></script>
+</head>
+<body>
+
+    <div>
+        <input onchange="changeParam('frequency', this);" id="frequency" type="range" min="0" max="1000" step="10" value="440" />
+        <label>Частота</label>
+    </div>
+    <div>
+        <input onchange="changeGain(this);" id="gain" type="range" min="0" max="40" step="2" value="0" />
+        <label>Усиление</label>
+    </div>
+    <div>
+        <input onchange="changeFilter2(this);" id="filter" type="range" min="0" max="5" step="1" value="0" />
+        <label>Фильтр</label>
+    </div>
+    <input onchange="changeFilter(this);" id="filter1" type="radio" name="types" class="radio1" value="1">
+    <label>Highpass filter</label>
+    <input onchange="changeFilter(this);" id="filter2" type="radio" name="types" class="radio2" value="2">
+    <label>Extra filter</label>
+    <div>
+        <label id="text1">Text</label>
+
+        <button onclick="play();return false;">play</button>
+        <button onclick="stop();return false;">stop</button>
+
+    </div>
+</body>
+</html>
